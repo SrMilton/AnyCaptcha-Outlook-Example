@@ -3,7 +3,7 @@
 Create your selenium session and answers everything till funcaptcha appears in the screen
 */
 
-Console.WriteLine("FunCaptcha appers..");
+Console.WriteLine("FunCaptcha appears..");
 
 string token = await anycaptchaSolve(driver.Url); //You need to pass the actual URL to anycaptcha solve it
 
@@ -16,7 +16,7 @@ string jsscript = "var anyCaptchaToken = '" + token + "';" +
                     "encDoc.documentElement.appendChild(script); " +
                     "encWin.AnyCaptchaSubmit(anyCaptchaToken);"; //This code will submit your captcha with solved token
 
-IJavaScriptExecutor js = (IJavaScriptExecutor)gc;
+IJavaScriptExecutor js = (IJavaScriptExecutor)drive;
 js.ExecuteScript(jsscript); //Then execute the JS
 
 /*
