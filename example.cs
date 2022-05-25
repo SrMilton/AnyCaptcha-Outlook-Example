@@ -35,7 +35,7 @@ public static async Task<string> anycaptchaSolve(string pageurl)
             {
                 var parser = new FileIniDataParser();
                 IniData data2 = parser.ReadFile("config.ini");
-                string apikey = data2["apikey"]["anycaptcha"]; //My APIKEY is on a INI File, you can chage this to hardcode if you want
+                string apikey = data2["apikey"]["anycaptcha"]; //My APIKEY is on a INI File, you can change this to hardcode if you want
 
                 string url = "https://api.anycaptcha.com/createTask";
                 var baseAddress = new Uri(url);
@@ -68,7 +68,7 @@ public static async Task<string> anycaptchaSolve(string pageurl)
             {
                 var parser = new FileIniDataParser();
                 IniData data2 = parser.ReadFile("config.ini");
-                string apikey = data2["apikey"]["anycaptcha"];//My APIKEY is on a INI File, you can chage this to hardcode if you want
+                string apikey = data2["apikey"]["anycaptcha"];//My APIKEY is on a INI File, you can change this to hardcode if you want
 
                 string url = "https://api.anycaptcha.com/getTaskResult";
                 var baseAddress = new Uri(url);
