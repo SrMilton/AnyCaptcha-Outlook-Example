@@ -84,7 +84,6 @@ public static async Task<string> anycaptchaSolve(string pageurl)
                     };
                     var content = new FormUrlEncodedContent(values);
 
-                    //Colocar cookies dinamicamente aqui
                     client2.DefaultRequestHeaders.Clear();
                     var result = client2.PostAsync("", content).Result;
                     string responseString = await result.Content.ReadAsStringAsync();
